@@ -33,16 +33,18 @@ class Table(object):
         for _ in range(4):
             temp_x = temp_x + 1
             try:
-                if color in self.table[temp_y][temp_x].content:
-                    counter = counter + 1
+                if color not in self.table[temp_y][temp_x].content:
+                    break
+                counter = counter + 1
             except IndexError:
                 break
         temp_x = x
         for _ in range(4):
             temp_x = temp_x - 1
             try:
-                if color in self.table[temp_y][temp_x].content:
-                    counter = counter + 1
+                if color not in self.table[temp_y][temp_x].content:
+                    break
+                counter = counter + 1
             except IndexError:
                 break
         if counter > 3:
@@ -54,16 +56,18 @@ class Table(object):
         for _ in range(4):
             temp_y = temp_y + 1
             try:
-                if color in self.table[temp_y][temp_x].content:
-                    counter = counter + 1
+                if color not in self.table[temp_y][temp_x].content:
+                    break
+                counter = counter + 1
             except IndexError:
                 break
         temp_y = y
         for _ in range(4):
             temp_y = temp_y - 1
             try:
-                if color in self.table[temp_y][temp_x].content:
-                    counter = counter + 1
+                if color not in self.table[temp_y][temp_x].content:
+                    break
+                counter = counter + 1
             except IndexError:
                 break
         if counter > 3:
@@ -77,8 +81,9 @@ class Table(object):
             temp_x = temp_x + 1
             temp_y = temp_y + 1
             try:
-                if color in self.table[temp_y][temp_x].content:
-                    counter = counter + 1
+                if color not in self.table[temp_y][temp_x].content:
+                    break
+                counter = counter + 1
             except IndexError:
                 break
         temp_x = x
@@ -87,8 +92,9 @@ class Table(object):
             temp_x = temp_x - 1
             temp_y = temp_y - 1
             try:
-                if color in self.table[temp_y][temp_x].content:
-                    counter = counter + 1
+                if color not in self.table[temp_y][temp_x].content:
+                    break
+                counter = counter + 1
             except IndexError:
                 break
         if counter > 3:
@@ -102,8 +108,9 @@ class Table(object):
             temp_x = temp_x + 1
             temp_y = temp_y - 1
             try:
-                if color in self.table[temp_y][temp_x].content:
-                    counter = counter + 1
+                if color not in self.table[temp_y][temp_x].content:
+                    break
+                counter = counter + 1
             except IndexError:
                 break
         temp_x = x
@@ -112,8 +119,9 @@ class Table(object):
             temp_x = temp_x - 1
             temp_y = temp_y + 1
             try:
-                if color in self.table[temp_y][temp_x].content:
-                    counter = counter + 1
+                if color not in self.table[temp_y][temp_x].content:
+                    break
+                counter = counter + 1
             except IndexError:
                 break
         if counter > 3:

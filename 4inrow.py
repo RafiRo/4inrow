@@ -31,6 +31,8 @@ while(True):
     if status != None:
         if status == True:
             win = True
+            print(player_turn)
+            print("breaking")
             print(game_table)
             break
         else:
@@ -39,6 +41,7 @@ while(True):
 
 
     print(game_table)
+
     player_turn = next_player(game_players, player_turn)
 
     if game_table.place_in_table == 0:
@@ -46,7 +49,7 @@ while(True):
         break
 
 if win == True:
-    print("%s win!" % game_players[player_turn].name)
+    print("%s win!" % game_players[player_turn-1].name)
     pass
 
 
